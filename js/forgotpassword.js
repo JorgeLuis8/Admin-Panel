@@ -35,13 +35,7 @@
             }, 2000);
         });
 
-        // Link de voltar ao login
-        document.querySelector('.back-link a').addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Redirecionando para página de login...');
-            // Aqui você redirecionaria para a página de login
-            alert('Redirecionando para a página de login...');
-        });
+    
 
         // Validação de email em tempo real
         document.getElementById('email').addEventListener('input', function() {
