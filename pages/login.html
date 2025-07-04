@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rei da Bola ADM - Login</title>
+ <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
+
+</head>
+<body>
+    <div class="form-container">
+        <div class="logo-container">
+            <img src="../img/IconeVerde.png" alt="Logo" class="logo">
+            <h1 class="brand-name">REI DA BOLA ADM</h1>
+        </div>
+
+        <p class="welcome-text">Bem-vindo de volta! Faça login para continuar.</p>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email ou Apelido</label>
+                <input type="text" id="email" name="email" placeholder="seu@email.com ou apelido" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Sua senha" required>
+            </div>
+
+            <div class="checkbox-group">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Lembrar de mim</label>
+                </div>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Entrar</button>
+        </form>
+
+        <div class="signup-link">
+            Não tem uma conta? <a href="#">Cadastre-se aqui</a>
+        </div>
+    </div>
+
+
+</body>
+</html>
