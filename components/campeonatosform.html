@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Campeonatos - Rei da Bola</title>
+   
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Cadastro de Campeonatos</h2>
+
+     <form id="form-estados">
+    <div class="field-group">
+        <label for="nome">Nome do Campeonato:</label>
+        <input type="text" id="nome" name="nome" required />
+    </div>
+
+    <div class="field-group">
+        <label for="desc">Descrição:</label>
+        <input type="text" id="desc" name="desc" required />
+    </div>
+
+    <div class="field-group">
+        <label for="menu">Cidade:</label>
+        <select id="menu" name="menu" required>
+            <option value="" disabled selected>Selecione uma cidade</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+        </select>
+    </div>
+
+    <button type="submit">Salvar</button>
+</form>
+
+    </div>
+
+    <script src="../js/campeonatosform.js"> </script>
+    <link rel="stylesheet" href="../css/campeonatosform.css">
+</body>
+</html>

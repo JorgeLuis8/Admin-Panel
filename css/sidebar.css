@@ -228,3 +228,71 @@
             color: #666;
             font-size: 16px;
         }
+
+        /* RESPONSIVIDADE */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        padding: 30px;
+    }
+    
+    .welcome-card {
+        padding: 25px;
+    }
+    
+    .welcome-title {
+        font-size: 24px;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 80px 20px 20px 20px;
+    }
+    
+    .welcome-card {
+        padding: 20px;
+    }
+    
+    .welcome-title {
+        font-size: 22px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Smartphones pequenos */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 260px;
+    }
+    
+    .main-content {
+        padding: 80px 15px 15px 15px;
+    }
+    
+    .welcome-card {
+        padding: 15px;
+    }
+    
+    .welcome-title {
+        font-size: 20px;
+    }
+}
