@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Partidas - Rei da Bola</title>
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Cadastro de Partidas</h2>
+
+        <form id="form-partidas">
+            <div class="field-group">
+                <label for="rodada_id">Rodada:</label>
+                <select id="rodada_id" name="rodada_id" required>
+                  <option value="">Selecione a Rodada</option>
+                  <option value="1">Rodada 1</option>
+                  <option value="2">Rodada 2</option>
+                  <option value="3">Rodada 3</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="time_casa_id">Time da Casa:</label>
+                <select id="time_casa_id" name="time_casa_id" required>
+                  <option value="">Selecione o Time da Casa</option>
+                  <option value="1">Time A (Temporada 2025)</option>
+                  <option value="2">Time B (Temporada 2025)</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="time_visitante_id">Time Visitante:</label>
+                <select id="time_visitante_id" name="time_visitante_id" required>
+                  <option value="">Selecione o Time Visitante</option>
+                  <option value="1">Time A (Temporada 2025)</option>
+                  <option value="2">Time B (Temporada 2025)</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="gols_casa">Gols do Time da Casa:</label>
+                <input type="number" id="gols_casa" name="gols_casa" min="0">
+            </div>
+
+            <div class="field-group">
+                <label for="gols_visitante">Gols do Time Visitante:</label>
+                <input type="number" id="gols_visitante" name="gols_visitante" min="0">
+            </div>
+
+            <div class="field-group">
+                <label for="data_hora">Data e Hora da Partida:</label>
+                <input type="datetime-local" id="data_hora" name="data_hora" required>
+            </div>
+
+            <button type="submit">Salvar Partida</button>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="../css/partidasform.css">
+    <script src="../js/partidasform.js"></script>
+</body>
+</html>

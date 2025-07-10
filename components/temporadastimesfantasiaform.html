@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição de Time em Temporada - Rei da Bola</title>
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Inscrever Time de Fantasia em uma Temporada</h2>
+        <p>Selecione um de seus times e a temporada que ele irá disputar.</p>
+
+        <form id="form-timefantasiatemporada">
+
+            <div class="field-group">
+                <label for="time_fantasia_id">Seu Time de Fantasia:</label>
+                <select id="time_fantasia_id" name="time_fantasia_id" required> <option value="">Selecione seu Time</option>
+                  <option value="1">Meu Time Fantasia</option>
+                  <option value="2">Outro Time Fantasia</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="temporada_id">Temporada para Disputar:</label>
+                <select id="temporada_id" name="temporada_id" required> <option value="">Selecione a Temporada</option>
+                  <option value="1">Temporada 2025</option>
+                  <option value="2">Temporada 2024</option>
+                </select>
+            </div>
+
+            <button type="submit">Inscrever Time</button>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="../css/timefantasiatemporadaform.css">
+    <script src="../js/timefantasiatemporadaform.js"></script>
+</body>
+</html>

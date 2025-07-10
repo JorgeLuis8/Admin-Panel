@@ -30,16 +30,4 @@
         });
 
 
-        // Link "Esqueceu a senha?"
-        document.querySelector('.forgot-password').addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Redirecionando para recuperação de senha...');
-            alert('Funcionalidade de recuperação de senha em desenvolvimento!');
-        });
-
-        // Link de cadastro
-        document.querySelector('.signup-link a').addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Redirecionando para página de cadastro...');
-            alert('Redirecionando para a página de cadastro...');
-        });
+ 

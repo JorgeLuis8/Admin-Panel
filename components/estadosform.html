@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Estado - Rei da Bola</title>
+   
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Cadastro de Estado</h2>
+
+        <form id="form-estados">
+            <div class="field-group">
+                <label for="nome">Nome do Estado:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="field-group">
+                <label for="sigla">Sigla:</label>
+                <input type="text" id="sigla" name="sigla" maxlength="2" required>
+            </div>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+
+    <script src="../js/estadosform.js"> </script>
+    <link rel="stylesheet" href="../css/estadosform.css">
+</body>
+</html>

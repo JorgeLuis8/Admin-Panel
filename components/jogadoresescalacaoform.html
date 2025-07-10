@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montar Escalação - Rei da Bola</title>
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Montar Escalação</h2>
+        <div class="lineup-info">
+            <p><strong>Time:</strong> Meu Time Fantasia</p>
+            <p><strong>Rodada:</strong> Rodada 5</p>
+        </div>
+
+        <form id="form-escalacao-jogadores">
+            <input type="hidden" name="lineup_id" value="123"> <h3>Jogadores Disponíveis</h3>
+            <p>Selecione os jogadores para compor seu time.</p>
+
+            <div class="player-selection-grid">
+                <h4>Goleiros</h4>
+                <div class="player-card">
+                    <label>
+                        <input type="checkbox" name="jogadores_selecionados[]" value="101">
+                        Goleiro Exemplo (Time A)
+                    </label>
+                </div>
+
+                <h4>Defensores</h4>
+                <div class="player-card">
+                    <label>
+                        <input type="checkbox" name="jogadores_selecionados[]" value="201">
+                        Zagueiro Top (Time B)
+                    </label>
+                </div>
+                <div class="player-card">
+                    <label>
+                        <input type="checkbox" name="jogadores_selecionados[]" value="202">
+                        Lateral Veloz (Time C)
+                    </label>
+                </div>
+
+                <h4>Meio-campistas</h4>
+                <div class="player-card">
+                    <label>
+                        <input type="checkbox" name="jogadores_selecionados[]" value="301">
+                        Maestro do Meio-campo (Time A)
+                    </label>
+                </div>
+
+                <h4>Atacantes</h4>
+                <div class="player-card">
+                    <label>
+                        <input type="checkbox" name="jogadores_selecionados[]" value="401">
+                        Artilheiro Nato (Time D)
+                    </label>
+                </div>
+                <div class="player-card">
+                    <label>
+                        <input type="checkbox" name="jogadores_selecionados[]" value="402">
+                        Ponta Rápido (Time B)
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Salvar Escalação</button>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="../css/montarescalacaoform.css">
+    <script src="../js/montarescalacaoform.js"></script>
+</body>
+</html>

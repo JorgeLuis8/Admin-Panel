@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogador por Temporada - Rei da Bola</title>
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Associar Jogador a uma Temporada</h2>
+        <p>Vincule um jogador a um time e uma posição para uma temporada específica.</p>
+
+        <form id="form-temporadajogador">
+
+            <div class="field-group">
+                <label for="jogador_id">Jogador:</label>
+                <select id="jogador_id" name="jogador_id" required> <option value="">Selecione o Jogador</option>
+                  <option value="1">Jogador Exemplo 1</option>
+                  <option value="2">Jogador Exemplo 2</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="time_temporada_id">Time na Temporada:</label>
+                <select id="time_temporada_id" name="time_temporada_id" required> <option value="">Selecione o Time</option>
+                  <option value="1">Time A (Temporada 2025)</option>
+                  <option value="2">Time B (Temporada 2025)</option>
+                </select>
+            </div>
+            
+            <div class="field-group">
+                <label for="posicao_id">Posição do Jogador:</label>
+                <select id="posicao_id" name="posicao_id" required> <option value="">Selecione a Posição</option>
+                  <option value="1">Atacante</option>
+                  <option value="2">Defensor</option>
+                </select>
+            </div>
+
+            <button type="submit">Salvar Associação</button>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="../css/temporadajogadorform.css">
+    <script src="../js/temporadajogadorform.js"></script>
+</body>
+</html>
