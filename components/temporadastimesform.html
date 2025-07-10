@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Time por Temporada - Rei da Bola</title>
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Associar Time a uma Temporada</h2>
+        <p>Vincule um time a uma temporada e defina suas informações para o período.</p>
+
+        <form id="form-timetemporada">
+
+            <div class="field-group">
+                <label for="time_id">Time:</label>
+                <select id="time_id" name="time_id" required> <option value="">Selecione o Time</option>
+                  <option value="1">Time Exemplo A</option>
+                  <option value="2">Time Exemplo B</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="temporada_id">Temporada:</label>
+                <select id="temporada_id" name="temporada_id" required> <option value="">Selecione a Temporada</option>
+                  <option value="1">Temporada 2025</option>
+                  <option value="2">Temporada 2024</option>
+                </select>
+            </div>
+            
+            <div class="field-group">
+                <label for="nome">Nome do Time na Temporada:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Ex: Time A 2025"> </div>
+
+            <div class="field-group">
+                <label for="apelido">Apelido na Temporada:</label>
+                <input type="text" id="apelido" name="apelido"> </div>
+
+            <div class="field-group">
+                <label for="abreviacao">Abreviação (3 letras):</label>
+                <input type="text" id="abreviacao" name="abreviacao" required maxlength="3"> </div>
+
+            <button type="submit">Salvar Associação</button>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="../css/timetemporadaform.css">
+    <script src="../js/timetemporadaform.js"></script>
+</body>
+</html>

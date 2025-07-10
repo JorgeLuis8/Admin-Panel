@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Rodadas - Rei da Bola</title>
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        
+        <h2>Cadastro de Rodadas</h2>
+
+        <form id="form-rodadas">
+            <div class="field-group">
+                <label for="nome">Nome da Rodada:</label>
+                <input type="text" id="nome" name="nome" required> </div>
+
+            <div class="field-group">
+                <label for="temporada_id">Temporada:</label>
+                <select id="temporada_id" name="temporada_id" required> <option value="">Selecione a Temporada</option>
+                  <option value="1">Temporada 2025</option>
+                  <option value="2">Temporada 2024</option>
+                </select>
+            </div>
+
+            <button type="submit">Salvar Rodada</button>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="../css/rodadasform.css">
+    <script src="../js/rodadasform.js"></script>
+</body>
+</html>

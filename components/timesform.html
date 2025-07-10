@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cadastro de Times - Rei da Bola</title>
+    <link rel="stylesheet" href="../css/timesform.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+
+        <h2>Cadastro de Times</h2>
+
+        <form id="form-times">
+            <div class="field-group">
+                <label for="nome">Nome do Time:</label>
+                <input type="text" id="nome" name="nome" required />
+            </div>
+
+            <div class="field-group">
+                <label for="fundacao">Data de Fundação:</label>
+                <input type="date" id="fundacao" name="fundacao" required />
+            </div>
+
+            <div class="field-group">
+                <label for="cidade">Cidade:</label>
+                <select id="cidade" name="cidade" required>
+                    <option value="" disabled selected>Selecione uma Cidade</option>
+                    <option value="cidade1">Cidade 1</option>
+                    <option value="cidade2">Cidade 2</option>
+                    <option value="cidade3">Cidade 3</option>
+                    <option value="cidade4">Cidade 4</option>
+                </select>
+            </div>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+
+    <script src="../js/timesform.js"></script>
+</body>
+</html>
