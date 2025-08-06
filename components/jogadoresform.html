@@ -27,16 +27,62 @@
                 <label for="cidade">Cidade:</label>
                 <select id="cidade" name="cidade" required>
                     <option value="" disabled selected>Selecione uma Cidade</option>
-                    <option value="cidade1">Cidade 1</option>
-                    <option value="cidade2">Cidade 2</option>
-                    <option value="cidade3">Cidade 3</option>
-                    <option value="cidade4">Cidade 4</option>
+                    <option value="picos">Picos</option>
+                    <option value="teresina">Teresina</option>
+                    <option value="floriano">Floriano</option>
                 </select>
             </div>
 
             <button type="submit">Salvar</button>
         </form>
-    </div>
+
+        <hr>
+
+        <div class="data-table-container">
+            <h2>Jogadores Cadastrados</h2>
+
+            <div class="table-filters">
+                <input type="text" id="search-nome" placeholder="Filtrar por nome...">
+                <select id="filter-cidade">
+                    <option value="">Todas as Cidades</option>
+                    <option value="picos">Picos</option>
+                    <option value="teresina">Teresina</option>
+                    <option value="floriano">Floriano</option>
+                </select>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome do Jogador</th>
+                        <th>Data de Nascimento</th>
+                        <th>Cidade</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Carlos Eduardo</td>
+                        <td>1998-05-15</td>
+                        <td>Picos</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Francisco José</td>
+                        <td>2001-02-20</td>
+                        <td>Teresina</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
 
     <script src="../js/jogadoresform.js"></script>
 </body>

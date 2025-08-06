@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montar Escalação - Rei da Bola</title>
+    <link rel="stylesheet" href="../css/montarescalacaoform.css">
 </head>
 <body>
     <div class="container">
@@ -15,8 +16,47 @@
             <p><strong>Rodada:</strong> Rodada 5</p>
         </div>
 
+        <hr>
+
+        <div class="lineup-summary">
+            <h3>Sua Escalação (3/11)</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Jogador</th>
+                        <th class="actions-header">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Goleiro</td>
+                        <td>Goleiro Exemplo (Time A)</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-delete">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Defensor</td>
+                        <td>Zagueiro Top (Time B)</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-delete">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Atacante</td>
+                        <td>Artilheiro Nato (Time D)</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-delete">Remover</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <form id="form-escalacao-jogadores">
-            <input type="hidden" name="lineup_id" value="123"> <h3>Jogadores Disponíveis</h3>
+            <input type="hidden" name="lineup_id" value="123">
+            
+            <h3>Jogadores Disponíveis</h3>
             <p>Selecione os jogadores para compor seu time.</p>
 
             <div class="player-selection-grid">
@@ -69,7 +109,6 @@
         </form>
     </div>
 
-    <link rel="stylesheet" href="../css/montarescalacaoform.css">
     <script src="../js/montarescalacaoform.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Cidades - Rei da Bola</title>
-   
+    <link rel="stylesheet" href="../css/cidadesform.css">
 </head>
 <body>
     <div class="container">
@@ -12,7 +12,7 @@
         
         <h2>Cadastro de Cidades</h2>
 
-        <form id="form-estados">
+        <form id="form-cidades">
             <div class="field-group">
                 <label for="nome">Nome da Cidade:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -22,19 +22,68 @@
                 <label for="sigla">Abreviação:</label>
                 <input type="text" id="sigla" name="sigla" maxlength="5" required>
             </div>
-<label for="menu">Estado</label>
-<select id="menu" name="menu">
-  <option value="option1">Option 1</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
-  <option value="option4">Option 4</option>
-</select>
+
+            <div class="field-group">
+                <label for="menu-estado">Estado:</label>
+                <select id="menu-estado" name="menu-estado" required>
+                    <option value="" disabled selected>Selecione um estado</option>
+                    <option value="option1">Piauí</option>
+                    <option value="option2">Ceará</option>
+                    <option value="option3">Maranhão</option>
+                </select>
+            </div>
 
             <button type="submit">Salvar</button>
         </form>
-    </div>
 
-   <link rel="stylesheet" href="../css/cidadesform.css">
+        <hr>
+
+        <div class="data-table-container">
+            <h2>Cidades Cadastradas</h2>
+
+            <div class="table-filters">
+                <input type="text" id="search-cidade" placeholder="Filtrar por cidade...">
+                <select id="filter-estado">
+                    <option value="">Todos os Estados</option>
+                    <option value="PI">Piauí</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                </select>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome da Cidade</th>
+                        <th>Abreviação</th>
+                        <th>Estado</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Picos</td>
+                        <td>PIC</td>
+                        <td>Piauí</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Teresina</td>
+                        <td>THE</td>
+                        <td>Piauí</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
     <script src="../js/cidadesform.js"></script>
 </body>
 </html>

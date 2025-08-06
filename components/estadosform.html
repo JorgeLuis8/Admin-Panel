@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Estado - Rei da Bola</title>
-   
+    <link rel="stylesheet" href="../css/estadosform.css">
 </head>
 <body>
     <div class="container">
@@ -25,9 +25,54 @@
 
             <button type="submit">Salvar</button>
         </form>
-    </div>
 
-    <script src="../js/estadosform.js"> </script>
-    <link rel="stylesheet" href="../css/estadosform.css">
+        <hr>
+
+        <div class="data-table-container">
+            <h2>Estados Cadastrados</h2>
+
+            <div class="table-filters">
+                <input type="text" id="search-estado" placeholder="Filtrar por nome ou sigla...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome do Estado</th>
+                        <th>Sigla</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Piauí</td>
+                        <td>PI</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ceará</td>
+                        <td>CE</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>Maranhão</td>
+                        <td>MA</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+    <script src="../js/estadosform.js"></script>
 </body>
 </html>
