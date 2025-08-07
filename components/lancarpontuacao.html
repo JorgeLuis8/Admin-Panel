@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançar Pontuações por Partida - Rei da Bola</title>
+    <link rel="stylesheet" href="../css/lancarpontuacao.css">
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+
+        <h2>Lançar Pontuações da Partida</h2>
+        <p>Selecione a partida, o jogador e o critério de pontuação a ser registrado.</p>
+
+        <form id="form-pontuacoes">
+            <div class="field-group">
+                <label for="match_id">Partida:</label>
+                <select id="match_id" name="match_id" required>
+                    <option value="" disabled selected>Selecione uma partida</option>
+                    <option value="1">River x Flamengo (Rodada 1)</option>
+                    <option value="2">Altos x Parnahyba (Rodada 1)</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="player_season_id">Jogador:</label>
+                <select id="player_season_id" name="player_season_id" required>
+                    <option value="" disabled selected>Selecione um jogador</option>
+                    <option value="101">Carlos Eduardo (River)</option>
+                    <option value="102">Francisco José (River)</option>
+                    <option value="201">Artilheiro Nato (Flamengo)</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="scoring_criteria_id">Critério de Pontuação:</label>
+                <select id="scoring_criteria_id" name="scoring_criteria_id" required>
+                    <option value="" disabled selected>Selecione um critério</option>
+                    <option value="1">Gol Marcado</option>
+                    <option value="2">Assistência</option>
+                    <option value="3">Cartão Amarelo</option>
+                    <option value="4">Jogo sem sofrer gol</option>
+                </select>
+            </div>
+            
+            <div class="field-group">
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+            </div>
+
+            <div class="field-group">
+                <label for="metadata">Metadados (JSON - Opcional):</label>
+                <textarea id="metadata" name="metadata" rows="3" placeholder='Ex: {"minuto": 42, "tipo": "cabeca"}'></textarea>
+            </div>
+
+            <button type="submit">Lançar Pontuação</button>
+        </form>
+
+        <hr>
+
+        <!-- SEÇÃO DA TABELA DE DADOS -->
+        <div class="data-table-container">
+            <h2>Pontuações Lançadas</h2>
+
+            <!-- Filtros da Tabela -->
+            <div class="table-filters">
+                <select id="filter-match">
+                    <option value="">Todas as Partidas</option>
+                    <option value="1">River x Flamengo (Rodada 1)</option>
+                    <option value="2">Altos x Parnahyba (Rodada 1)</option>
+                </select>
+                <input type="text" id="search-player" placeholder="Filtrar por jogador...">
+            </div>
+
+            <!-- Tabela de Dados -->
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Partida</th>
+                        <th>Jogador</th>
+                        <th>Critério</th>
+                        <th>Qtd.</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de linha de dados 1 -->
+                    <tr>
+                        <td>River x Flamengo</td>
+                        <td>Carlos Eduardo</td>
+                        <td>Gol Marcado</td>
+                        <td>1</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Exemplo de linha de dados 2 -->
+                    <tr>
+                        <td>River x Flamengo</td>
+                        <td>Artilheiro Nato</td>
+                        <td>Cartão Amarelo</td>
+                        <td>1</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- FIM DA SEÇÃO DA TABELA -->
+    </div>
+
+    <script src="../js/pontuacoesform.js"></script>
+</body>
+</html>
