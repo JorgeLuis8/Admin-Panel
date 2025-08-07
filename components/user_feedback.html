@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback do Usuário - Rei da Bola</title>
+    <link rel="stylesheet" href="../css/user_feedback.css">
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+
+        <h2>Enviar Feedback</h2>
+        <p>Sua opinião é muito importante para melhorarmos o Rei da Bola!</p>
+
+        <form id="form-feedback">
+            <div class="field-group">
+                <label for="fantasy_team_season_id">Selecione seu Time de Fantasia:</label>
+                <select id="fantasy_team_season_id" name="fantasy_team_season_id" required>
+                    <option value="" disabled selected>Selecione um time</option>
+                    <option value="1">Meu Time Fantasia (Temporada 2025)</option>
+                    <option value="2">Amigos da Bola FC (Temporada 2025)</option>
+                </select>
+            </div>
+
+            <!-- Campos de Avaliação -->
+            <fieldset class="rating-group">
+                <legend>Como você avalia a ideia geral do jogo?</legend>
+                <div class="rating-options">
+                    <label><input type="radio" name="idea_rating" value="1"> 1</label>
+                    <label><input type="radio" name="idea_rating" value="2"> 2</label>
+                    <label><input type="radio" name="idea_rating" value="3"> 3</label>
+                    <label><input type="radio" name="idea_rating" value="4"> 4</label>
+                    <label><input type="radio" name="idea_rating" value="5"> 5</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="rating-group">
+                <legend>Como você avalia o design e a aparência?</legend>
+                <div class="rating-options">
+                    <label><input type="radio" name="design_rating" value="1"> 1</label>
+                    <label><input type="radio" name="design_rating" value="2"> 2</label>
+                    <label><input type="radio" name="design_rating" value="3"> 3</label>
+                    <label><input type="radio" name="design_rating" value="4"> 4</label>
+                    <label><input type="radio" name="design_rating" value="5"> 5</label>
+                </div>
+            </fieldset>
+            
+            <fieldset class="rating-group">
+                <legend>Como você avalia a facilidade de uso?</legend>
+                <div class="rating-options">
+                    <label><input type="radio" name="usability_rating" value="1"> 1</label>
+                    <label><input type="radio" name="usability_rating" value="2"> 2</label>
+                    <label><input type="radio" name="usability_rating" value="3"> 3</label>
+                    <label><input type="radio" name="usability_rating" value="4"> 4</label>
+                    <label><input type="radio" name="usability_rating" value="5"> 5</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="rating-group">
+                <legend>Quão relevante o jogo é para um fã de fantasy?</legend>
+                <div class="rating-options">
+                    <label><input type="radio" name="fantasy_relevance_rating" value="1"> 1</label>
+                    <label><input type="radio" name="fantasy_relevance_rating" value="2"> 2</label>
+                    <label><input type="radio" name="fantasy_relevance_rating" value="3"> 3</label>
+                    <label><input type="radio" name="fantasy_relevance_rating" value="4"> 4</label>
+                    <label><input type="radio" name="fantasy_relevance_rating" value="5"> 5</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="rating-group">
+                <legend>Qual a probabilidade de você recomendar a um amigo?</legend>
+                <div class="rating-options">
+                    <label><input type="radio" name="recommendation_rating" value="1"> 1</label>
+                    <label><input type="radio" name="recommendation_rating" value="2"> 2</label>
+                    <label><input type="radio" name="recommendation_rating" value="3"> 3</label>
+                    <label><input type="radio" name="recommendation_rating" value="4"> 4</label>
+                    <label><input type="radio" name="recommendation_rating" value="5"> 5</label>
+                </div>
+            </fieldset>
+
+            <div class="field-group">
+                <label for="comments">Comentários Adicionais:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Deixe suas sugestões, críticas ou elogios..."></textarea>
+            </div>
+
+            <button type="submit">Enviar Feedback</button>
+        </form>
+
+        <hr>
+
+        <!-- SEÇÃO DA TABELA DE DADOS -->
+        <div class="data-table-container">
+            <h2>Feedbacks Enviados</h2>
+
+            <!-- Filtros da Tabela -->
+            <div class="table-filters">
+                <select id="filter-team">
+                    <option value="">Filtrar por Time</option>
+                    <option value="1">Meu Time Fantasia (Temporada 2025)</option>
+                    <option value="2">Amigos da Bola FC (Temporada 2025)</option>
+                </select>
+            </div>
+
+            <!-- Tabela de Dados -->
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Time de Fantasia</th>
+                        <th>Média Geral</th>
+                        <th>Comentário</th>
+                        <th>Data</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de linha de dados 1 -->
+                    <tr>
+                        <td>Meu Time Fantasia (2025)</td>
+                        <td>4.2</td>
+                        <td>O jogo é ótimo, mas a interface poderia ser...</td>
+                        <td>2024-10-26</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-view">Ver Detalhes</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Exemplo de linha de dados 2 -->
+                    <tr>
+                        <td>Amigos da Bola FC (2025)</td>
+                        <td>3.0</td>
+                        <td>Gostei da ideia, porém achei um pouco...</td>
+                        <td>2024-10-25</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-view">Ver Detalhes</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- FIM DA SEÇÃO DA TABELA -->
+    </div>
+
+    <script src="../js/feedbackform.js"></script>
+</body>
+</html>
