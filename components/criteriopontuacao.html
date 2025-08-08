@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critérios de Pontuação - Rei da Bola</title>
+    <link rel="stylesheet" href="../css/criteriopontuacao.css">
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+
+        <h2>Cadastro de Critérios de Pontuação</h2>
+
+        <form id="form-criterios">
+            <div class="field-group">
+                <label for="name">Nome do Critério:</label>
+                <input type="text" id="name" name="name" placeholder="Ex: Gol Marcado" required>
+            </div>
+
+            <div class="field-group">
+                <label for="points">Pontos:</label>
+                <input type="number" id="points" name="points" step="0.01" placeholder="Ex: 8.00" required>
+            </div>
+
+            <div class="field-group">
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description" rows="3" placeholder="Descreva quando este critério é aplicado..."></textarea>
+            </div>
+
+            <button type="submit">Salvar Critério</button>
+        </form>
+
+        <hr>
+
+        <!-- SEÇÃO DA TABELA DE DADOS -->
+        <div class="data-table-container">
+            <h2>Critérios Cadastrados</h2>
+
+            <!-- Filtros da Tabela -->
+            <div class="table-filters">
+                <input type="text" id="search-criterio" placeholder="Filtrar por nome...">
+            </div>
+
+            <!-- Tabela de Dados -->
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome do Critério</th>
+                        <th>Pontos</th>
+                        <th>Descrição</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de linha de dados 1 -->
+                    <tr>
+                        <td>Gol Marcado</td>
+                        <td>8.00</td>
+                        <td>Pontos para cada gol feito por um jogador de linha.</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Exemplo de linha de dados 2 -->
+                    <tr>
+                        <td>Assistência</td>
+                        <td>5.00</td>
+                        <td>Pontos para o passe que resulta em gol.</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Exemplo de linha de dados 3 -->
+                    <tr>
+                        <td>Jogo sem sofrer gol (Goleiro)</td>
+                        <td>5.00</td>
+                        <td>Bônus para goleiro que joga a partida inteira sem sofrer gols.</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- FIM DA SEÇÃO DA TABELA -->
+    </div>
+
+    <script src="../js/criteriosform.js"></script>
+</body>
+</html>
