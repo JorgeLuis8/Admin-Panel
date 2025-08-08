@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Escalações - Rei da Bola</title>
 </head>
+
 <body>
     <div class="container">
         <div id="message" class="message"></div>
-        
+
         <h2>Criar Escalação</h2>
         <p>Selecione seu time de fantasia e a rodada para montar sua escalação.</p>
 
@@ -16,25 +18,75 @@
 
             <div class="field-group">
                 <label for="time_fantasia_temporada_id">Seu Time de Fantasia:</label>
-                <select id="time_fantasia_temporada_id" name="time_fantasia_temporada_id" required> <option value="">Selecione seu Time</option>
-                  <option value="1">Meu Time Fantasia (Temporada 2025)</option>
+                <select id="time_fantasia_temporada_id" name="time_fantasia_temporada_id" required>
+                    <option value="">Selecione seu Time</option>
+                    <option value="1">Meu Time Fantasia (Temporada 2025)</option>
                 </select>
             </div>
 
             <div class="field-group">
                 <label for="rodada_id">Rodada:</label>
-                <select id="rodada_id" name="rodada_id" required> <option value="">Selecione a Rodada</option>
-                  <option value="1">Rodada 1</option>
-                  <option value="2">Rodada 2</option>
+                <select id="rodada_id" name="rodada_id" required>
+                    <option value="">Selecione a Rodada</option>
+                    <option value="1">Rodada 1</option>
+                    <option value="2">Rodada 2</option>
                 </select>
+            </div>
+
+            <div class="data-table-container">
+                <h2>Minhas Escalações</h2>
+
+                <div class="table-filters">
+                    <select id="filter-time">
+                        <option value="">Todos os Times</option>
+                        <option value="1">Meu Time Fantasia (Temporada 2025)</option>
+                    </select>
+                    <select id="filter-rodada">
+                        <option value="">Todas as Rodadas</option>
+                        <option value="1">Rodada 1</option>
+                        <option value="2">Rodada 2</option>
+                    </select>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Time de Fantasia</th>
+                            <th>Rodada</th>
+                            <th>Pontuação</th>
+                            <th class="actions-header">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Time de Fantasia">Meu Time Fantasia (Temporada 2025)</td>
+                            <td data-label="Rodada">Rodada 1</td>
+                            <td data-label="Pontuação">87.50</td>
+                            <td class="actions-cell">
+                                <button class="btn-action btn-edit">Ver/Editar</button>
+                                <button class="btn-action btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Time de Fantasia">Meu Time Fantasia (Temporada 2025)</td>
+                            <td data-label="Rodada">Rodada 2</td>
+                            <td data-label="Pontuação">--</td>
+                            <td class="actions-cell">
+                                <button class="btn-action btn-edit">Ver/Editar</button>
+                                <button class="btn-action btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <button type="submit">Criar Escalação</button>
         </form>
-        
-        </div>
+
+    </div>
 
     <link rel="stylesheet" href="../css/escalacoesform.css">
     <script src="../js/escalacoesform.js"></script>
 </body>
+
 </html>

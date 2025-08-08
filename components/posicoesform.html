@@ -1,30 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Posições - Rei da Bola</title>
 </head>
+
 <body>
     <div class="container">
         <div id="message" class="message"></div>
-        
+
         <h2>Cadastro de Posições de Jogadores</h2>
 
         <form id="form-posicoes">
             <div class="field-group">
                 <label for="nome">Nome da Posição:</label>
-                <input type="text" id="nome" name="nome" required> </div>
+                <input type="text" id="nome" name="nome" required>
+            </div>
 
             <div class="field-group">
                 <label for="abreviacao">Abreviação:</label>
-                <input type="text" id="abreviacao" name="abreviacao" maxlength="3" required> </div>
+                <input type="text" id="abreviacao" name="abreviacao" maxlength="3" required>
+            </div>
 
             <button type="submit">Salvar Posição</button>
         </form>
+
+        <div class="data-table-container">
+            <h2>Posições Cadastradas</h2>
+
+            <div class="table-filters">
+                <input type="text" id="search-posicao" placeholder="Filtrar por nome da posição...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome da Posição</th>
+                        <th>Abreviação</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nome da Posição">Goleiro</td>
+                        <td data-label="Abreviação">GOL</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nome da Posição">Zagueiro</td>
+                        <td data-label="Abreviação">ZAG</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+
+
+
 
     <link rel="stylesheet" href="../css/posicoesform.css">
     <script src="../js/posicoesform.js"></script>
 </body>
+
 </html>
