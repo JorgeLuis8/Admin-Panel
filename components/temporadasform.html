@@ -44,73 +44,81 @@
                 </div>
             </div>
 
-
             <div class="field-group">
                 <label for="menu">Campeonato:</label>
                 <select id="menu" name="menu" required>
                     <option value="" disabled selected>Selecione um Campeonato</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                    <option value="option4">Option 4</option>
+                    <option value="copa-picos-2025">Copa Picos 2025</option>
+                    <option value="torneio-regional">Torneio Regional</option>
+                    <option value="campeonato-local">Campeonato Local</option>
+                    <option value="liga-municipal">Liga Municipal</option>
                 </select>
-            </div>
-
-            <div class="data-table-container">
-                <h2>Temporadas Cadastradas</h2>
-
-                <div class="table-filters">
-                    <input type="text" id="search-temporada" placeholder="Filtrar por nome da temporada...">
-                    <select id="filter-status">
-                        <option value="">Todos os Status</option>
-                        <option value="true">Ativo</option>
-                        <option value="false">Inativo</option>
-                    </select>
-                </div>
-
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Nome da Temporada</th>
-                            <th>Campeonato</th>
-                            <th>Início</th>
-                            <th>Término</th>
-                            <th>Status</th>
-                            <th class="actions-header">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Nome da Temporada">Temporada 2025</td>
-                            <td data-label="Campeonato">Copa Picos 2025</td>
-                            <td data-label="Início">01/03/2025</td>
-                            <td data-label="Término">30/11/2025</td>
-                            <td data-label="Status">Ativo</td>
-                            <td class="actions-cell">
-                                <button class="btn-action btn-edit">Editar</button>
-                                <button class="btn-action btn-delete">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-label="Nome da Temporada">Temporada 2024</td>
-                            <td data-label="Campeonato">Torneio Regional</td>
-                            <td data-label="Início">01/03/2024</td>
-                            <td data-label="Término">30/11/2024</td>
-                            <td data-label="Status">Inativo</td>
-                            <td class="actions-cell">
-                                <button class="btn-action btn-edit">Editar</button>
-                                <button class="btn-action btn-delete">Excluir</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
 
             <button type="submit">Salvar</button>
         </form>
+
+        <hr>
+
+        <div class="data-table-container">
+            <h2>Temporadas Cadastradas</h2>
+
+            <div class="table-filters">
+                <input type="text" id="search-temporada" placeholder="Filtrar por nome da temporada...">
+                <select id="filter-status">
+                    <option value="">Todos os Status</option>
+                    <option value="true">Ativo</option>
+                    <option value="false">Inativo</option>
+                </select>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome da Temporada</th>
+                        <th>Campeonato</th>
+                        <th>Início</th>
+                        <th>Término</th>
+                        <th>Status</th>
+                        <th class="actions-header">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nome da Temporada">Temporada 2025</td>
+                        <td data-label="Campeonato">Copa Picos 2025</td>
+                        <td data-label="Início">01/03/2025</td>
+                        <td data-label="Término">30/11/2025</td>
+                        <td data-label="Status">Ativo</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nome da Temporada">Temporada 2024</td>
+                        <td data-label="Campeonato">Torneio Regional</td>
+                        <td data-label="Início">01/03/2024</td>
+                        <td data-label="Término">30/11/2024</td>
+                        <td data-label="Status">Inativo</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nome da Temporada">Temporada 2023</td>
+                        <td data-label="Campeonato">Liga Municipal</td>
+                        <td data-label="Início">15/02/2023</td>
+                        <td data-label="Término">15/12/2023</td>
+                        <td data-label="Status">Inativo</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit">Editar</button>
+                            <button class="btn-action btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <script src="../js/temporadasform.js"></script>
-</body>
-
-</html>
