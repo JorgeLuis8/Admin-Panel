@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Temporadas - Rei da Bola</title>
     <link rel="stylesheet" href="../css/temporadasform.css">
 </head>
+
 <body>
     <div class="container">
         <div id="message" class="message"></div>
-        
+
         <h2>Cadastro de Temporadas</h2>
 
         <form id="form-estados">
@@ -54,10 +56,61 @@
                 </select>
             </div>
 
+            <div class="data-table-container">
+                <h2>Temporadas Cadastradas</h2>
+
+                <div class="table-filters">
+                    <input type="text" id="search-temporada" placeholder="Filtrar por nome da temporada...">
+                    <select id="filter-status">
+                        <option value="">Todos os Status</option>
+                        <option value="true">Ativo</option>
+                        <option value="false">Inativo</option>
+                    </select>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome da Temporada</th>
+                            <th>Campeonato</th>
+                            <th>Início</th>
+                            <th>Término</th>
+                            <th>Status</th>
+                            <th class="actions-header">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nome da Temporada">Temporada 2025</td>
+                            <td data-label="Campeonato">Copa Picos 2025</td>
+                            <td data-label="Início">01/03/2025</td>
+                            <td data-label="Término">30/11/2025</td>
+                            <td data-label="Status">Ativo</td>
+                            <td class="actions-cell">
+                                <button class="btn-action btn-edit">Editar</button>
+                                <button class="btn-action btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome da Temporada">Temporada 2024</td>
+                            <td data-label="Campeonato">Torneio Regional</td>
+                            <td data-label="Início">01/03/2024</td>
+                            <td data-label="Término">30/11/2024</td>
+                            <td data-label="Status">Inativo</td>
+                            <td class="actions-cell">
+                                <button class="btn-action btn-edit">Editar</button>
+                                <button class="btn-action btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <button type="submit">Salvar</button>
         </form>
     </div>
 
     <script src="../js/temporadasform.js"></script>
 </body>
+
 </html>
